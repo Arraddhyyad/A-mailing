@@ -10,7 +10,7 @@ def send_reply(reply_text, to, subject):
     message = MIMEText(reply_text)
     message['to'] = to
     message['subject'] = "Re: " + subject
-
+     
     raw_message = base64.urlsafe_b64encode(message.as_bytes()).decode()
     body = {'raw': raw_message}
 
